@@ -33,3 +33,4 @@ Piege: Je mets la quantité dans la table commande_detail
         Piege: Le FK n'est pas  null 
         J'utilise LEFT JOIN pour ne pas  perdre aucune commande
 
+Piege:Une table de la salle et la commande sont différentes parce que la table de la salle indique juste l'endroit que les clients s'installe et la commande représente l'achat qu'un client fait en une journée

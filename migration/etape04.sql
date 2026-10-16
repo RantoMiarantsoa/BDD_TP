@@ -26,7 +26,7 @@ WHERE id_com = 2;
 SELECT
     c.id_com,
     c.date,
-    COALESCE(cl.nom_client, 'client de passage')
+    COALESCE(cl.nom_client, 'client de passage') as nom
 FROM COMMANDE c
 LEFT JOIN CLIENT cl
     ON c.id_client = cl.id_client
