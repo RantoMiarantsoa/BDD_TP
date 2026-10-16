@@ -7,7 +7,10 @@ INSERT INTO CATEGORIE(libelle) VALUES ('Plat Malagasy'), ('Dessert et goûter'),
 
 ALTER TABLE PLAT ADD COLUMN id_categorie INTEGER;
 ALTER TABLE PLAT ALTER COLUMN id_categorie SET NOT NULL;
-
+ALTER TABLE plat
+ADD CONSTRAINT fk_plat_categorie
+FOREIGN KEY (id_categorie)
+REFERENCES categorie (id_cat);
         
 
 UPDATE PLAT SET id_categorie = 1 WHERE nom_plat='Romazava';
