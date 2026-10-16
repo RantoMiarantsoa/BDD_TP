@@ -1,7 +1,7 @@
 ## NIVEAU 1: Fondamental
 # Etape 01
     nouveau:
-        - Table : PLAT(**id_plat**,nom,categorie,prix)
+        - Table : PLAT(**id_plat**,nom,prix)
     **Piege**:
         -Type du prix j'ai mis INTEGER,
         -Pour l'identifiant j'ai aussi mis en INTEGER
@@ -11,3 +11,9 @@
         -Table: CATEGORIE(**id_cat**,libelle)
     modifier:
         Table: PLAT:(**id_plat**,nom,#id_categorie,prix)
+
+        Si on ajoute une colonne VARCHAR(50) donc à chaque insertion nouveau plat il faut entrer manuellement le nom categorie et les noms du catégories peuvent changer à chaque fois
+         ex: On a catégorie Soupe et quelqu'un peut ajouter un nouveau plat dans la carte et il met 'Lasopy' comme catégorie 
+        et on ne pourrait pas ralier les 2 tables 
+    
+    
