@@ -13,7 +13,6 @@ CREATE TABLE COMMANDE_DETAIL(
     FOREIGN KEY (id_plat) REFERENCES PLAT(id_plat)
 );
 
-SELECT c.id_com,c.designation,SUM(p.prix * cd.qte) FROM COMMANDE AS c JOIN COMMANDE_DETAIL AS cd ON c.id_com = cd.id_com JOIN PLAT AS p ON cd.id_plat = p.id_plat GROUP BY c.id_com,c.designation;
 
 SELECT
     c.id_com,
@@ -24,8 +23,9 @@ SELECT
     p.prix * cd.qte AS sous_total
 FROM COMMANDE c
 JOIN COMMANDE_DETAIL cd ON c.id_com = cd.id_com
-JOIN PLAT p ON cd.id_plat = p.id_plat
-ORDER BY c.id_com;
+JOIN PLAT p ON cd.id_plat = p.id_plat;
+
+
 INSERT INTO COMMANDE(date,designation) VALUES
     ('2026-10-16 12:30:00','Sakafo atoandro'),
 ('2026-10-16 13:15:00','Sakafo atoandro'),

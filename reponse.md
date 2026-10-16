@@ -23,3 +23,13 @@
                 COMMANDE_DETAIL(*id_detail**,#id_com,#id_plat,qte)
 
 Piege: Je mets la quantité dans la table commande_detail
+
+# Etape 4:
+    nouveau:
+        Table: CLIENT(**id_client**,nom_client)
+    modifier:
+        COMMANDE(**id_com**,date,#id_client)
+
+        Piege: Le FK n'est pas  null 
+        J'utilise LEFT JOIN pour ne pas  perdre aucune commande
+
